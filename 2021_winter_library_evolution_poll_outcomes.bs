@@ -1,0 +1,454 @@
+<pre class='metadata'>
+Title: 2021 Winter Library Evolution Poll Outcomes
+Shortname: D2333
+Revision: 0
+Status: D
+Group: WG21
+Audience: WG21
+Editor: Bryce Adelstein Lelbach (he/him/his) — Library Evolution Chair, NVIDIA, brycelelbach@gmail.com
+URL: https://wg21.link/P2333R0
+!Source: <a href="https://github.com/brycelelbach/wg21_p2333_2021_fall_library_evolution_poll_outcomes/blob/main/2021_fall_library_evolution_poll_outcomes.bs">GitHub</a>
+Issue Tracking: GitHub https://github.com/brycelelbach/wg21_p2233_2021_fall_library_evolution_poll_outcomes/issues
+Metadata Order: Editor, This Version, Source, Issue Tracking, Project, Audience
+Markup Shorthands: markdown yes
+Toggle Diffs: no
+No Abstract: yes
+Boilerplate: style-syntax-highlighting off
+</pre>
+
+<style>
+pre {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.ins, ins, ins *, span.ins, span.ins * {
+  background-color: rgb(200, 250, 200);
+  color: rgb(0, 136, 0);
+  text-decoration: none;
+}
+.del, del, del *, span.del, span.del * {
+  background-color: rgb(250, 200, 200);
+  color: rgb(255, 0, 0);
+  text-decoration: line-through;
+  text-decoration-color: rgb(255, 0, 0);
+}
+math, span.math {
+  font-family: serif;
+  font-style: italic;
+}
+ul {
+  list-style-type: "— ";
+}
+blockquote {
+  counter-reset: paragraph;
+}
+div.numbered, div.newnumbered {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+div.numbered:before, div.newnumbered:before {
+  position: absolute;
+  margin-left: -2em;
+  display-style: block;
+}
+div.numbered:before {
+  content: counter(paragraph);
+  counter-increment: paragraph;
+}
+div.newnumbered:before {
+  content: "�";
+}
+div.numbered ul, div.newnumbered ul {
+  counter-reset: list_item;
+}
+div.numbered li, div.newnumbered li {
+  margin-left: 3em;
+}
+div.numbered li:before, div.newnumbered li:before {
+  position: absolute;
+  margin-left: -4.8em;
+  display-style: block;
+}
+div.numbered li:before {
+  content: "(" counter(paragraph) "." counter(list_item) ")";
+  counter-increment: list_item;
+}
+div.newnumbered li:before {
+  content: "(�." counter(list_item) ")";
+  counter-increment: list_item;
+}
+</style>
+
+# Introduction # {#introduction}
+
+In Winter 2021, the C++ Library Evolution group conducted a series of electronic
+  decision polls [[P2289R0]].
+This paper provides the results of those polls and summarizes the results.
+
+In total, 31 people participated in the polls.
+Some participants opted to not vote on some polls.
+Thank you to everyone who participated, and to the proposal authors for all
+  their hard work!
+
+# Summarized Poll Results # {#summarized-poll-results}
+
+<table>
+<tr>
+<th style="padding-bottom: 10px;">Poll
+<th>SF
+<th>WF
+<th>N
+<th>WA
+<th>SA
+<th>Outcome
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 1: Modify [[P0288R7]] (`any_invocable`) by renaming `any_invocable` to
+  `move_only_function` (as per [[P2265R0]] Renaming `any_invocable`) and
+  placing the facility in `<functional>` instead of adding a new header, and
+  then send the revised paper to LWG for C++23, classified as an addition
+  ([[P0592R4]] bucket 3 item).
+<td>9
+<td>13
+<td>4
+<td>1
+<td>2
+<td>Consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 2: Send [[P1642R5]] (Freestanding [utilities], [ranges], And [iterators])
+  to LWG, classified as an improvement of an existing feature ([[P0592R4]]
+  bucket 2 item).
+<td>13
+<td>13
+<td>0
+<td>0
+<td>0
+<td>Unanimous consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 3: Send [[P2216R2]] (`std::format` Improvements) to LWG for C++23,
+  classified as an improvement of an existing feature ([[P0592R4]] bucket 2
+  item).
+<td>15
+<td>11
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 4: Send [[P2077R2]] (Heterogeneous Erasure Overloads For Associative
+  Containers) to LWG for C++23, classified as an improvement of an existing
+  feature ([[P0592R4]] bucket 2 item).
+<td>12
+<td>11
+<td>0
+<td>0
+<td>0
+<td>Unanimous consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 5: Send [[P2136R2]] (`invoke_r`) to LWG for C++23, classified as an
+  improvement of an existing feature ([[P0592R4]] bucket 2 item).
+<td>11
+<td>12
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 6: Modify [[P1951R0]] (Default Arguments For `pair`'s Forwarding
+  Constructor) by rebasing the wording on the working draft, and then send the
+  revised paper to LWG for C++23, classified as an improvement of an existing
+  feature ([[P0592R4]] bucket 2 item).
+<td>14
+<td>9
+<td>2
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 7: Modify [[P2231R0]] (Missing `constexpr` In `optional` And `variant`) by
+  adding bumps of the feature test macros `__cpp_lib_optional` and
+  `__cpp_lib_variant`, and then send the revised paper to LWG for C++23,
+  classified as an improvement of an existing feature ([[P0592R4]] bucket 2
+  item).
+<td>19
+<td>8
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 8: Send [[P0901R8]] (Size Feedback In `operator new`) to CWG for C++23,
+  classified as an improvement of an existing feature ([[P0592R4]] bucket 2
+  item).
+<td>12
+<td>10
+<td>0
+<td>1
+<td>0
+<td>Consensus in favor.
+
+<tr>
+<td style="padding-bottom: 16px;">
+Poll 9: Send [[P1478R6]] (Byte-wise Atomic `memcpy`) to LWG for the Concurrency
+  TS v2, classified as an addition ([[P0592R4]] bucket 3 item).
+<td>6
+<td>11
+<td>2
+<td>1
+<td>0
+<td>Consensus in favor.
+
+</table>
+
+# Selected Comments # {#detailed-results}
+
+## Poll 1: [[P0288R7]] The Feature Formerly Known As `any_invocable` ## {#poll-1}
+
+> The name now fits into its surrounding facilities, and gives useful hints
+> about the properties of the function wrapper.
+>
+> — Strongly Favor
+
+> Consistency between function wrapper types (using the word `function`) is
+> valuable, as is a prefix that distinguishes the semantics of
+> `move_only_function` from `function`.
+>
+> — Strongly Favor
+
+> I like this name change. It would be annoying for the "move-only flavor of
+> `function`" to have an entirely different name from `function`.  Perhaps it
+> was a bad idea to name `function` the way we did, but that ship has sailed,
+> and `any_invocable` makes it worse in two different ways (`function` not in
+> the name, and `any_*` falsely suggests that `std::any` is involved).
+>
+> — Weakly Favor
+
+> The name is good enough, and the facilities are overdue.
+>
+> — Weakly Favor
+
+> The facility is plainly needed; no one has found a perfect name, but the
+> proposed name is acceptable.
+>
+> — Weakly Favor
+
+> I do not much care for this rename, but it works.
+>
+> — Weakly Favor
+
+> Basically, I am not sure that `move_only_function` is the best name that
+> could be. To me it's better than `any_invocable` and that's why I am weakly
+> in favor. But I am trying to look at that from the user perspective. As the
+> user I have `function` and `move_only_function`. From the name I cannot get
+> why I need `move_only_function` and when it's better than just `function`. I
+> understand that it can work with move only callables but I believe
+> `move_only_function` should also work with copyable callables So, basically
+> user question is: "why do I need to use `move_only_function` with a copyable
+> callable?". `unique_function` would probably be better name. It's consistent
+> with `unique_ptr` and still owns the "copy" of the callable underneath (even
+> if it has a slightly different semantics comparing with `unique_ptr`) Or we
+> should try to find something else.
+>
+> — Weakly Favor
+
+> While I'm for placing the facility in `<functional>`, I think
+> `move_only_function` is a unconscionable name: The target need not be move
+> only (it could be copyable or not movable at all) and the target need not be
+> a function. If the name is construed as describing the wrapper rather than
+> the target it's still inaccurate: `is_function_v<move_only_function<...>>` is
+> always false.
+>
+> — Strongly Against
+
+> In my experience, `any_invocable` is used more often than `function` - few
+> callbacks and predicates need or can be copied and therefore, `any_invocable`
+> is the more general solution, before even talking about the performances of
+> `any_invocable` being much more palatable than that of `function`, const
+> correctness, etc.
+>
+> We should therefore nudge people toward `any_invocable`, alas,
+> `move_only_function` makes the type look like an oddity that should not be
+> used through an usually long name, which unusually refers to a specific
+> property of the type.
+>
+> Why not `move_only_const_correct_function` then?
+>
+> Moving away from the `any_*` will continue to cause naming debates for future
+> type erased types.
+>
+> — Strongly Against
+
+## Poll 2: [[P1642R5]] Freestanding [utilities], [ranges], And [iterators] ## {#poll-2}
+
+> Anything that adds to freestanding makes it easier for many segments to use the C++ library without hacks to get around the limitations.
+>
+> — Strongly Favor
+
+> Anything that is trivial to make freestanding should be, since the implementation effort is necessary in general regardless.
+>
+> — Weakly Favor
+
+## Poll 3: [[P2216R2]] `std::format` Improvements ## {#poll-3}
+
+> Compile time checking and compilation of format strings will increase runtime
+> performance and catch errors earlier in the design-code-build-test cycle.
+>
+> — Strongly Favor
+
+> This is major improvement to `format` both in terms of safety and binary
+> footprint. It is a good opportunity to make the API right before major
+> implementations ship the feature.
+>
+> — Strongly Favor
+
+> Losing the ability to wrap `format` is concerning but `vformat` is probably
+> an acceptable workaround for now. There may be a case for exposing the
+> compile-time checking functionality to users so that they can take advantage
+> of it in their wrappers.
+>
+> — Weakly Favor
+
+> Changes like this should come sooner rather than later to minimize the
+> divergence of practical C++20 implementations.
+>
+> — Weakly Favor
+
+## Poll 4: [[P2077R2]] Heterogeneous Erasure Overloads For Associative Containers ## {#poll-4}
+
+> This fixes an embarrassing issue with associative containers, where the (to
+> users) obvious code is performance-penalized.
+>
+> — Strongly Favor
+
+> Since `find` became heterogeneous the need to `find` and then erase on an
+> iterator was klunky: No reason for erase not to be able to do this directly.
+>
+> — Strongly Favor
+
+> Improves consistency and symmetry of existing interface, as well as
+> opportunities for efficiency.
+>
+> — Weakly Favor
+
+## Poll 5: [[P2136R2]] `invoke_r` ## {#poll-5}
+
+> The fact that `is_invocable_r` and friends existed without `invoke_r` was
+> weird and led to ad hoc implementations thereof.
+>
+> — Strongly Favor
+
+> Not being able to specify the return type comes up with enough frequency that
+> fixing it is well worth the effort.
+>
+> — Weakly Favor
+
+> This improves consistency with the existing type traits and provides a
+> capability sufficiently useful to already be employed by the standard library
+> in multiple places.
+>
+> — Weakly Favor
+
+## Poll 6: [[P1951R0]] Default Arguments For `pair`'s Forwarding Constructor ## {#poll-6}
+
+> This fixes something that's currently broken.
+>
+> — Strongly Favor
+
+> This fixes the behavior of code that contains a silent performance bug, as
+> well as allowing certain cases involving non-movable types.
+>
+> — Strongly Favor
+
+> Eliminates a usage gotcha, so an improvement.
+>
+> — Weakly Favor
+
+## Poll 7: [[P2231R0]] Missing `constexpr` In `optional` And `variant` ## {#poll-7}
+
+> More constexpr in generic library code is better than the alternative
+> especially given the role optional & variant have as "vocabulary types."
+>
+> — Strongly Favor
+
+> It's silly to not consider this a fix for C++20, given the core-language
+> changes there, but the sooner the better.
+>
+> — Strongly Favor
+
+> This is an important constexpr extension with good implementation experience.
+>
+> — Weakly Favor
+
+## Poll 8: [[P0901R8]] Size Feedback In `operator new` ## {#poll-8}
+
+> Seems like a straightforward improvement: Hiding useful information is the
+> number one way to have non-zero cost abstractions.
+>
+> — Strongly Favor
+
+> I feel like the size was always a required result for allocation. I like this
+> and would like it to become the primary allocation interface.
+>
+> — Weakly Favor
+
+> This is a good addition to C++. My one concern is that sometimes more space
+> is allocated for performance, and sometimes memory is so constrained on
+> embedded systems that extra memory is not wanted unless it would have been
+> allocated anyway. This interface does not give the caller a way to
+> differentiate between those two requests.
+>
+> — Weakly Favor
+
+> I appreciate the situation, but I'm not sure that the solution is at the
+> right level of abstraction.
+>
+> — Weakly Against
+
+## Poll 9: [[P1478R6]] Byte-wise Atomic `memcpy` ## {#poll-9}
+
+> This is a good candidate for something that should be added to the
+> Concurrency TS, as we need the feedback to answer the open questions.
+>
+> — Strongly Favor
+
+> I've seen real world use cases where this facility would've allowed the code
+> written to be more correct.
+>
+> — Strongly Favor
+
+> Being able to utilize the (weak) semantics of actual memory operations is
+> much better than having formal undefined behavior that programmers are
+> incentivized to ignore.
+>
+> — Weakly Favor
+
+> Specialized facility but definitely standard library material
+>
+> — Weakly Favor
+
+> I generally dislike the TS process, but this does seem to need much wider
+> feedback after implementation to answer the questions raised in the paper.
+>
+> — Weakly Favor
+
+> Given the current backlog, putting this feature in a TS with an uncertain
+> future does not seem conductive to progress.
+>
+> — Weakly Against
+
