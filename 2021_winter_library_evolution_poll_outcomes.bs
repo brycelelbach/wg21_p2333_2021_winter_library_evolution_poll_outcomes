@@ -296,11 +296,19 @@ Poll 9: Send [[P1478R6]] (Byte-wise Atomic `memcpy`) to LWG for the Concurrency
 
 ## Poll 2: [[P1642R5]] Freestanding [utilities], [ranges], And [iterators] ## {#poll-2}
 
-> Anything that adds to freestanding makes it easier for many segments to use the C++ library without hacks to get around the limitations.
+> Anything that adds to freestanding makes it easier for many segments to use
+> the C++ library without hacks to get around the limitations.
 >
 > — Strongly Favor
 
-> Anything that is trivial to make freestanding should be, since the implementation effort is necessary in general regardless.
+> Anything that is trivial to make freestanding should be, since the
+> implementation effort is necessary in general regardless.
+>
+> — Weakly Favor
+
+> Maybe the choice of a `// freestanding` comment is unconventional, but it is
+> a direction towards a clearer definition of what's available in a
+> freestanding environment.
 >
 > — Weakly Favor
 
